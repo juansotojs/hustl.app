@@ -47,7 +47,7 @@ if(!post) return '';
                     {post?.photos?.length > 0 && post.photos.map(photo => (
                         <>
                         <div>
-                            <img src={'http://localhost:4000/uploads/'+photo} alt="" />
+                            <img src={'https://hustl-app-api.vercel.app/uploads/'+photo} alt="" />
                         </div>
                         </>
                 ))}
@@ -73,17 +73,17 @@ if(!post) return '';
                     <div>{post.photos?.[0] && (
                         <>
                         <div>
-                        <img onClick={() => setShowAllPhotos(true)} className="cursor-pointer aspect-square object-cover" src={'http://localhost:4000/uploads/'+post.photos[0]} alt="" />
+                        <img onClick={() => setShowAllPhotos(true)} className="cursor-pointer aspect-square object-cover" src={'https://hustl-app-api.vercel.app/uploads/'+post.photos[0]} alt="" />
                         </div>
                         </>
                         
                     )}</div>
                     <div className="grid">{post.photos?.[1] && (
-                        <img onClick={() => setShowAllPhotos(true)} className="cursor-pointer aspect-square object-cover" src={'http://localhost:4000/uploads/'+post.photos[1]} alt="" />
+                        <img onClick={() => setShowAllPhotos(true)} className="cursor-pointer aspect-square object-cover" src={'https://hustl-app-api.vercel.app/uploads/'+post.photos[1]} alt="" />
                     )}
                     <div className="overflow-hidden">
                     {post.photos?.[2] && (
-                        <img onClick={() => setShowAllPhotos(true)} className="cursor-pointer aspect-square object-cover relative top-2" src={'http://localhost:4000/uploads/'+post.photos[2]} alt="" />
+                        <img onClick={() => setShowAllPhotos(true)} className="cursor-pointer aspect-square object-cover relative top-2" src={'https://hustl-app-api.vercel.app/uploads/'+post.photos[2]} alt="" />
                     )}
                     </div>
                     
