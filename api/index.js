@@ -20,12 +20,12 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
     credentials: true,
-    origin: process.env.SERVER_URL,
+    origin: "https://hustl-app-frontend.vercel.app/",
 }));
 
 
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect('mongodb+srv://thedon:3qWGF5Y147Teihuu@cluster0.5b53rqp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 app.get('/test', (req,res) => {
     res.json('test ok');
 });
@@ -188,4 +188,4 @@ app.get('/favorites', async (req,res) => {
     res.json( await Booking.find({user:userData.id}).populate('post') );
 });
 
-app.listen(process.env.PORT);
+app.listen(4000);
