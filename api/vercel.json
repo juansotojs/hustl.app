@@ -10,7 +10,7 @@
       "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "https://hustl-app-frontend.vercel.app",
-        "Access-Control-Allow-Credentials": true
+        "Access-Control-Allow-Credentials": "true"
       }
     }
   ]
