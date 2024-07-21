@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
     credentials: true,
-    origin: "https://hustl-app-frontend.vercel.app",
+    origin: "https://hustl-app-frontend-av0set34w-juansotojs-projects.vercel.app",
 }));
 
 
