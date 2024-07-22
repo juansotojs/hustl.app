@@ -25,7 +25,7 @@ app.use(cors({
 
 
 
-mongoose.connect('mongodb+srv://thedon:3qWGF5Y147Teihuu@cluster0.5b53rqp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect(process.env.MONGODB_URI);
 app.get('/test', (req,res) => {
     res.json('test ok');
 });
