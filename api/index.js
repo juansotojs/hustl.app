@@ -9,7 +9,7 @@ const app = express();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const imageDownloader = require('image-downloader');
-const multer = require('multer');
+//const multer = require('multer');
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'youtinkthebaygonletudisrespectpacn1gga';
 const fs = require('fs');
@@ -102,7 +102,7 @@ app.post('/upload-by-link', async (req, res) => {
         res.json(newName);
 });
 
-const photosMiddleware = multer({dest:'uploads/'});
+/*const photosMiddleware = multer({dest:'uploads/'});
 app.post('/upload', photosMiddleware.array('photos', 100),(req, res) => {
     const uploadedFiles = [];
     for(let i = 0; i < req.files.length; i++){
@@ -114,7 +114,7 @@ app.post('/upload', photosMiddleware.array('photos', 100),(req, res) => {
         uploadedFiles.push(newPath.replace('uploads/', ''));
     }
     res.json(uploadedFiles);
-});
+}); */
 
 app.post('/posts', function (req, res) {
     const {token} = req.cookies;
