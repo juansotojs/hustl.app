@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
     credentials: true,
-    origin: ["https://hustl-app-frontend.vercel.app", "https://hustl-app-frontend-a9lh01pfu-juansotojs-projects.vercel.app"],
+    origin: "https://www.hustl-app-frontend.vercel.app",
 }));
 
 
@@ -188,4 +188,4 @@ app.get('/favorites', async (req,res) => {
     res.json( await Booking.find({user:userData.id}).populate('post') );
 });
 
-app.listen(4000);
+app.listen(process.env.PORT);
