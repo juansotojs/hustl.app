@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hustl - AI-Powered Decentralized Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="New Project (13).png" alt="Hustl Logo" class="logo-dark">
+            <img src="New Project (38).png" alt="Hustl Logo" class="logo-light">
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="connect-wallet">Connect Wallet</a>
+            <a href="#" class="user-profile">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="marketplace">
+        <div class="ai-chat-interface">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai">
+                    Welcome to Hustl! I'm your AI assistant. Are you looking to buy or sell today?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your response here...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <div class="marketplace-results">
+            <div class="results-header">
+                <h2>Top Matches</h2>
+                <div class="filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Services</button>
+                    <button class="filter-btn">Products</button>
+                </div>
+            </div>
+
+            <div class="listings-grid">
+                <!-- Example listings -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="build-custom-website-full-stack-website-landing-page-full-stack-web-developer.jpeg" alt="Service">
+                    </div>
+                    <div class="listing-details">
+                        <h3>Web Development</h3>
+                        <p>Full-stack development services</p>
+                        <div class="price">
+                            <i class="fab fa-polygon"></i>
+                            <span>0.5 MATIC</span>
+                        </div>
+                        <button class="view-listing">View Details</button>
+                    </div>
+                </div>
+
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="do-any-adobe-illustrator-work.jpg" alt="Service">
+                    </div>
+                    <div class="listing-details">
+                        <h3>Graphic Design</h3>
+                        <p>Professional logo and branding</p>
+                        <div class="price">
+                            <i class="fab fa-polygon"></i>
+                            <span>0.3 MATIC</span>
+                        </div>
+                        <button class="view-listing">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="transaction-modal" id="transactionModal">
+        <div class="modal-content">
+            <h2>Confirm Transaction</h2>
+            <div class="escrow-details">
+                <p>Service: Web Development</p>
+                <p>Amount: 0.5 MATIC</p>
+                <p>Seller: 0x1234...5678</p>
+            </div>
+            <div class="modal-buttons">
+                <button class="confirm-btn">Confirm & Pay</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="theme.js"></script>
+</body>
+</html> 

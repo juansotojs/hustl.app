@@ -1,0 +1,333 @@
+:root {
+    /* Dark theme (default) */
+    --primary-color: #000000;
+    --accent-color: #7fec7f;
+    --text-color: #ffffff;
+    --card-bg: #111111;
+    --chat-bg: #1a1a1a;
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Light theme */
+body.light-mode {
+    --primary-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f5f5f5;
+    --chat-bg: #ffffff;
+    --input-bg: rgba(0, 0, 0, 0.05);
+    --hover-bg: rgba(0, 0, 0, 0.02);
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.theme-toggle-btn .fa-sun {
+    display: none;
+}
+
+.theme-toggle-btn .fa-moon {
+    display: block;
+}
+
+body.light-mode .theme-toggle-btn .fa-sun {
+    display: block;
+}
+
+body.light-mode .theme-toggle-btn .fa-moon {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    position: relative;
+    height: 40px;
+}
+
+.logo img {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: var(--transition);
+}
+
+.logo-light {
+    opacity: 0;
+}
+
+.logo-dark {
+    opacity: 1;
+}
+
+/* When in light mode, switch the logos */
+body.light-mode .logo-light {
+    opacity: 1;
+}
+
+body.light-mode .logo-dark {
+    opacity: 0;
+}
+
+.connect-wallet {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.marketplace {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+.ai-chat-interface {
+    background: var(--chat-bg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.message.ai {
+    background: rgba(127, 236, 127, 0.1);
+    border-left: 3px solid var(--accent-color);
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    background: var(--card-bg);
+}
+
+.chat-input input {
+    flex-grow: 1;
+    background: var(--input-bg);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    border-radius: 20px;
+    margin-right: 0.5rem;
+}
+
+.chat-input button {
+    background: var(--accent-color);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.marketplace-results {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.listing-card {
+    background: var(--chat-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.listing-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.listing-details {
+    padding: 1rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    color: var(--accent-color);
+}
+
+.view-listing {
+    width: 100%;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.transaction-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.escrow-details {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.confirm-btn, .cancel-btn {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.cancel-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+    .marketplace {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .marketplace {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+
+    .ai-chat-interface {
+        height: 300px;
+    }
+}
