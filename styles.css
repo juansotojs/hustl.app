@@ -11,57 +11,6 @@
     --transition: all 0.3s ease;
 }
 
-/* Light theme */
-body.light-mode {
-    --primary-color: #ffffff;
-    --text-color: #000000;
-    --card-bg: #f5f5f5;
-    --chat-bg: #ffffff;
-    --input-bg: rgba(0, 0, 0, 0.05);
-    --hover-bg: rgba(0, 0, 0, 0.02);
-    --border-color: rgba(0, 0, 0, 0.1);
-}
-
-.theme-toggle {
-    margin-left: auto;
-    margin-right: 2rem;
-}
-
-.theme-toggle-btn {
-    background: transparent;
-    border: 2px solid var(--accent-color);
-    color: var(--text-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.theme-toggle-btn:hover {
-    background: var(--accent-color);
-    color: var(--primary-color);
-}
-
-.theme-toggle-btn .fa-sun {
-    display: none;
-}
-
-.theme-toggle-btn .fa-moon {
-    display: block;
-}
-
-body.light-mode .theme-toggle-btn .fa-sun {
-    display: block;
-}
-
-body.light-mode .theme-toggle-btn .fa-moon {
-    display: none;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -103,15 +52,6 @@ nav {
 
 .logo-dark {
     opacity: 1;
-}
-
-/* When in light mode, switch the logos */
-body.light-mode .logo-light {
-    opacity: 1;
-}
-
-body.light-mode .logo-dark {
-    opacity: 0;
 }
 
 .connect-wallet {
@@ -335,10 +275,6 @@ body.light-mode .logo-dark {
         gap: 1rem;
     }
 
-    .theme-toggle {
-        margin: 0;
-    }
-
     .marketplace {
         grid-template-columns: 1fr;
         padding: 1rem;
@@ -403,11 +339,6 @@ body.light-mode .logo-dark {
     .connect-wallet {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
-    }
-
-    .theme-toggle-btn {
-        width: 35px;
-        height: 35px;
     }
 
     .ai-chat-interface {
