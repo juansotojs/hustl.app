@@ -85,17 +85,33 @@ nav {
     flex-grow: 1;
     padding: 1rem;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .message {
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 10px;
+    max-width: 85%;
 }
 
 .message.ai {
     background: rgba(127, 236, 127, 0.1);
     border-left: 3px solid var(--accent-color);
+    align-self: flex-start;
+}
+
+.message.user {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    margin-left: auto;
+    border-right: 3px solid var(--accent-color);
+}
+
+.message.temporary {
+    opacity: 0.7;
+    font-style: italic;
 }
 
 .chat-input {
