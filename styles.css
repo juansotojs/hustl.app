@@ -264,15 +264,17 @@ nav {
 @media (max-width: 768px) {
     nav {
         padding: 1rem;
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
 
     .nav-links {
-        width: 100%;
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
         gap: 1rem;
+        margin-left: auto;
     }
 
     .marketplace {
@@ -332,6 +334,10 @@ nav {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
+    nav {
+        padding: 0.75rem;
+    }
+
     .logo {
         height: 30px;
     }
@@ -339,6 +345,10 @@ nav {
     .connect-wallet {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
+    }
+
+    .user-profile i {
+        font-size: 1.2rem;
     }
 
     .ai-chat-interface {
